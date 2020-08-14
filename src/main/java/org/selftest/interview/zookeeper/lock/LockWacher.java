@@ -1,4 +1,4 @@
-package org.selftest.interview.zookeeper;
+package org.selftest.interview.zookeeper.lock;
 
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;

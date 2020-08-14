@@ -14,8 +14,14 @@ ZookeeperLock：zookeeper实现
 ###锁实现
 
 
-###算法练习
-
+###算法练习 org.selftest.interview.algorithm
+link-实现
+    1.单链表反转
+    2.链表中环的检测
+    3.两个有序的链表合并
+    4.删除链表倒数第 n 个结点
+    5.求链表的中间结点
+===================
 
 ###zookeeper练习
 

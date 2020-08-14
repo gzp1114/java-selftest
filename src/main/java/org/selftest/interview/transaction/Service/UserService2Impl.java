@@ -37,8 +37,8 @@
 //    @Autowired
 //    SelfTransactionManage selfTransactionManage;
 //
-    @Autowired
-    DataSourceTransactionManager dataSourceTransactionManager;
+//    @Autowired
+//    DataSourceTransactionManager dataSourceTransactionManager;
 //    @Autowired
 //    TransactionDefinition transactionDefinition;
 //

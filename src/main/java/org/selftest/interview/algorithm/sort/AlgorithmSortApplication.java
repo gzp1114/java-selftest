@@ -16,6 +16,12 @@ public class AlgorithmSortApplication {
 
     }
 
+    /**
+     * 二分查找
+     * @param array
+     * @param a
+     * @return
+     */
     public static int biSearch(int[] array, int a) {
         int lo = 0;
         int hi = array.length-1;
@@ -33,6 +39,11 @@ public class AlgorithmSortApplication {
         return -1;
     }
 
+    /**
+     * 冒泡排序
+     * @param list
+     * @param n
+     */
     public static void bubbleSort1(int[] list, int n) {
         int i,j;
         for (i = 0; i < n; i++) {
@@ -47,6 +58,10 @@ public class AlgorithmSortApplication {
         }
     }
 
+    /**
+     * 插入排序
+     * @param arr
+     */
     public static void insertSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int insertVal = arr[i];

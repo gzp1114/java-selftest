@@ -1,9 +1,10 @@
-package org.selftest.interview.zookeeper;
+package org.selftest.interview.zookeeper.lock;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
+import org.selftest.interview.zookeeper.ZookeeperClient;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.TreeSet;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-public class DistributeLock {
+public class ZookeeperLock {
 
     //根节点
     private static final String ROOT_LOCK = "/nodeLock";
@@ -28,7 +29,7 @@ public class DistributeLock {
     //节点初始化数据
     private final static byte[] date = {1};
 
-    public DistributeLock() throws IOException, InterruptedException {
+    public ZookeeperLock() throws IOException, InterruptedException {
         this.zooKeeper = ZookeeperClient.getZkClient();
     }
 

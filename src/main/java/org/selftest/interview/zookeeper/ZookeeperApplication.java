@@ -2,6 +2,7 @@ package org.selftest.interview.zookeeper;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.*;
+import org.selftest.interview.zookeeper.lock.DistributeLock;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
