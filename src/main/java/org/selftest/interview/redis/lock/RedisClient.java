@@ -1,4 +1,4 @@
-package org.selftest.interview.distributedlock;
+package org.selftest.interview.redis.lock;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;

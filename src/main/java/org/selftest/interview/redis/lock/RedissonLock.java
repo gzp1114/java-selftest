@@ -1,4 +1,4 @@
-package org.selftest.interview.distributedlock;
+package org.selftest.interview.redis.lock;
 
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
