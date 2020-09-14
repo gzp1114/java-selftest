@@ -1,18 +1,22 @@
 package org.selftest.interview.algorithm.sort;
 
+import com.rabbitmq.tools.json.JSONUtil;
+
 public class AlgorithmSortApplication {
 
     public static void main(String[] args) {
-        int []array1 = {34,12,56,78,33,65};
-        System.out.println("========="+biSearch(array1,56));
-
-        int []array2 = {34,12,56,78,33,65};
-        bubbleSort1(array2,6);
-        System.out.println("========="+ array2);
+//        int []array1 = {34,12,56,78,33,65};
+//        System.out.println("========="+biSearch(array1,56));
+//
+//        int []array2 = {34,12,56,78,33,65};
+//        bubbleSort1(array2,6);
+//        System.out.println("========="+ array2);
 
         int []array3 = {34,12,56,78,33,65};
-        insertSort(array3);
-        System.out.println("========="+ array3);
+        bubbleSort(array3);
+        for (int i = 0; i < array3.length; i++) {
+            System.out.println("========="+ array3[i]);
+        }
 
     }
 
@@ -37,6 +41,19 @@ public class AlgorithmSortApplication {
             }
         }
         return -1;
+    }
+
+    public static void bubbleSort(int[] arr) {
+        int len = arr.length;
+        for(int i = 0; i < len - 1; i++) {
+            for(int j = 0; j < len - 1 - i; j++) {
+                if(arr[j] > arr[j+1]) {        // 相邻元素两两对比
+                    int temp = arr[j+1];        // 元素交换
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
     }
 
     /**
