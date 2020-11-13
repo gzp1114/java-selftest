@@ -1,5 +1,5 @@
-jvm	jvm	
-		类初始化流程
+> - jvm	jvm	
+> -		类初始化流程
 		jvm内存结构
 		jvm内存模型
 		jvm垃圾回收算法
