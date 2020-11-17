@@ -4,6 +4,10 @@ import com.alibaba.fastjson.JSON;
 import org.apache.tools.ant.util.DateUtils;
 
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,20 +15,29 @@ import java.util.List;
 public class TestClass {
 
     public static void main(String[] args) throws ParseException {
-        List<A> list = new ArrayList<>();
-        A a1 = new A();
-        a1.setEndTime(new Date());
-        list.add(a1);
-        A a2 = new A();
-        a2.setEndTime(DateUtil.parseTime("2020-08-01 00:00:00"));
-        list.add(a2);
-        A a3 = new A();
-        a3.setEndTime(DateUtil.parseTime("2020-08-30 00:00:00"));
-        list.add(a3);
+        LocalDate today = LocalDate.now();
+        //本月的第一天
+        LocalDate firstday = LocalDate.of(today.getYear(),today.getMonth(),1);
+        LocalDateTime localDateTime = firstday.atTime(LocalTime.MIN);
+        //本月的最后一天
+        LocalDate lastDay =today.with(TemporalAdjusters.lastDayOfMonth());
+        System.out.println("本月的第一天"+localDateTime.toString());
+        System.out.println("本月的最后一天"+lastDay);
 
-        list.sort((a,b) -> a.getEndTime().after(b.getEndTime())?1:0);
-
-        System.out.println(JSON.toJSONString(list));
+//        List<A> list = new ArrayList<>();
+//        A a1 = new A();
+//        a1.setEndTime(new Date());
+//        list.add(a1);
+//        A a2 = new A();
+//        a2.setEndTime(DateUtil.parseTime("2020-08-01 00:00:00"));
+//        list.add(a2);
+//        A a3 = new A();
+//        a3.setEndTime(DateUtil.parseTime("2020-08-30 00:00:00"));
+//        list.add(a3);
+//
+//        list.sort((a,b) -> a.getEndTime().after(b.getEndTime())?1:0);
+//
+//        System.out.println(JSON.toJSONString(list));
 
 //        Long num = 300000000000000072L;
 //        Long addNum = num;
